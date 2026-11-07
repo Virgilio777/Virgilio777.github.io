@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome do Autor | Livros</title>
+    <meta name="description" content="Site oficial de [Nome do Autor]. Conheça os livros, sinopses e onde comprar.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Nome do Autor</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#livros">Livros</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Nome do Autor</h1>
+            <p class="tagline">Escritor(a) de [gênero / tema dos livros]</p>
+            <a href="#livros" class="btn-primary">Conheça os Livros</a>
+        </div>
+    </section>
+
+    <section id="livros" class="section">
+        <div class="container">
+            <h2>Meus Livros</h2>
+            <div class="books-grid">
+                <!-- Livro 1 - Edite com seus dados -->
+                <div class="book-card">
+                    <div class="book-cover">
+                        <div class="placeholder-cover">Capa do Livro 1</div>
+                    </div>
+                    <h3>Título do Livro 1</h3>
+                    <p class="book-genre">Gênero</p>
+                    <p class="book-synopsis">Uma breve sinopse do livro aqui. Descreva em 2-3 linhas o que o leitor vai encontrar.</p>
+                    <a href="#" class="btn-secondary" target="_blank">Comprar / Ler</a>
+                </div>
+
+                <!-- Livro 2 -->
+                <div class="book-card">
+                    <div class="book-cover">
+                        <div class="placeholder-cover">Capa do Livro 2</div>
+                    </div>
+                    <h3>Título do Livro 2</h3>
+                    <p class="book-genre">Gênero</p>
+                    <p class="book-synopsis">Uma breve sinopse do livro aqui. Descreva em 2-3 linhas o que o leitor vai encontrar.</p>
+                    <a href="#" class="btn-secondary" target="_blank">Comprar / Ler</a>
+                </div>
+
+                <!-- Adicione mais livros copiando o bloco acima -->
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section section-alt">
+        <div class="container">
+            <h2>Sobre o Autor</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Olá! Meu nome é <strong>Nome do Autor</strong>. Escrevo sobre [tema principal].</p>
+                    <p>Aqui você pode contar um pouco da sua história: por que começou a escrever, o que inspira seus livros, sua experiência e o que deseja transmitir aos leitores.</p>
+                    <p>Este é o espaço ideal para criar conexão com quem visita o site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <div class="container">
+            <h2>Fique por Dentro</h2>
+            <p>Receba novidades, trechos exclusivos e lançamentos direto no seu e-mail.</p>
+            <div class="newsletter">
+                <!-- Substitua pelo link do seu formulário (MailerLite, Substack, Google Forms etc.) -->
+                <a href="#" class="btn-primary" target="_blank">Quero receber novidades</a>
+            </div>
+            <div class="social-links">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">TikTok</a>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Amazon</a>
+                <a href="#" target="_blank">Goodreads</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Nome do Autor. Todos os direitos reservados.</p>
+            <p>Site criado com apoio e hospedado gratuitamente no GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile simples
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
