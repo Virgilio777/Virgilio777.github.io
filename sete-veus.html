@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os Sete Véus | 1gilio L. J.</title>
+    <meta name="description" content="Coleção Os Sete Véus — Evangelhos e Apocalipses Apócrifos">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">1gilio L. J.</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#livros">Livros</a></li>
+                <li><a href="sete-veus.html">Os Sete Véus</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-content">
+            <h1>Os Sete Véus</h1>
+            <p class="tagline">Coletânea de Evangelhos e Apocalipses Apócrifos</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Coleção Os Sete Véus</h2>
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-cover">
+                        <div class="placeholder-cover">Evangelho de Judas</div>
+                    </div>
+                    <h3>Evangelho de Judas</h3>
+                    <p class="book-genre">Os Sete Véus</p>
+                    <p class="book-synopsis">Texto gnóstico do século II preservado no Códice Tchacos. Apresenta Judas Iscariotes como o único discípulo a quem Jesus revela mistérios cosmológicos sobre a geração santa, os céus e o verdadeiro significado da entrega. Inclui também a Epístola de Judas canônica. Edição formatada com introdução, índice e sumário.</p>
+                    <a href="#" class="btn-secondary" target="_blank">Em breve</a>
+                </div>
+
+                <!-- Os outros 6 livros da coleção serão adicionados aqui conforme formos preparando -->
+                <div class="book-card">
+                    <div class="book-cover">
+                        <div class="placeholder-cover">Apocalipse de Pedro</div>
+                    </div>
+                    <h3>Apocalipse de Pedro</h3>
+                    <p class="book-genre">Os Sete Véus</p>
+                    <p class="book-synopsis">Texto apocalíptico antigo que descreve visões do paraíso e do castigo dos ímpios. Será adicionado em breve.</p>
+                    <a href="#" class="btn-secondary" target="_blank">Em breve</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 1gilio L. J. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
