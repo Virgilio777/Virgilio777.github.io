@@ -3,147 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1gilio L. J. | Livros</title>
-    <meta name="description" content="Site oficial de 1gilio L. J. Conheça os livros, sinopses e onde comprar.">
-    <link rel="stylesheet" href="style.css">
+    <title>Evangelho de Filipe | Os Sete Véus</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3d2b1f;
+            --accent: #8b6914;
+            --text: #3d2b1f;
+            --text-light: #5c4033;
+            --bg: #faf6f1;
+            --bg-alt: #f5efe6;
+            --gold: #c9a227;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); line-height: 1.75; background: var(--bg); }
+        .container { max-width: 820px; margin: 2rem auto; padding: 3.5rem 3rem; background: #fffef9; border: 4px solid var(--gold); box-shadow: 0 0 0 1px #e8d5a3, 0 0 0 6px var(--gold), 0 0 0 7px #e8d5a3; position: relative; }
+        .container::before { content: ""; position: absolute; inset: 12px; border: 1px solid #e8d5a3; pointer-events: none; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--primary); }
+        h1 { font-size: 2.8rem; text-align: center; margin-bottom: 0.2rem; letter-spacing: 1px; font-weight: 700; }
+        .subtitle { text-align: center; color: var(--text-light); margin-bottom: 2.2rem; font-style: italic; font-size: 1.15rem; line-height: 1.5; }
+        .note { background: var(--bg-alt); padding: 1.6rem 1.8rem; border-left: 5px solid var(--gold); margin: 2.2rem 0; font-size: 0.96rem; color: var(--text); border-radius: 0 4px 4px 0; }
+        .toc { background: var(--bg-alt); padding: 1.8rem; margin: 2rem 0; border-radius: 4px; border: 1px solid #e8d5a3; }
+        .toc h2 { font-size: 1.5rem; margin-bottom: 1.2rem; color: var(--primary); text-align: center; }
+        .toc ul { list-style: none; }
+        .toc li { margin: 0.65rem 0; padding-left: 0.5rem; }
+        .toc a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .toc a:hover { text-decoration: underline; color: var(--accent); }
+        .book-content h2 { font-size: 1.7rem; margin: 2.8rem 0 1.2rem; border-bottom: 2px solid var(--gold); padding-bottom: 0.5rem; color: var(--primary); text-align: center; letter-spacing: 0.3px; }
+        .book-content p { margin-bottom: 1.2rem; color: var(--text); text-align: justify; hyphens: auto; }
+        .book-content strong { color: var(--primary); }
+        .ornament { text-align: center; color: var(--gold); font-size: 1.4rem; margin: 1.5rem 0; letter-spacing: 8px; }
+        .page-break { page-break-before: always; break-before: page; margin-top: 0; }
+        .cover { text-align: center; padding: 4rem 2rem; min-height: 90vh; display: flex; flex-direction: column; justify-content: center; }
+        .cover h1 { font-size: 3.2rem; margin-bottom: 1rem; }
+        .cover .subtitle { font-size: 1.3rem; margin-bottom: 3rem; }
+        .frontispiece { text-align: center; padding: 3rem 1rem; font-style: italic; }
+        .frontispiece .ornament { font-size: 2rem; }
+        sup { color: var(--accent); font-size: 0.75em; }
+        .footnotes { font-size: 0.85rem; margin-top: 2rem; border-top: 1px solid var(--gold); padding-top: 1rem; color: var(--text-light); }
+        .footnotes p { margin-bottom: 0.6rem; text-align: left; }
+        footer { text-align: center; margin-top: 3.5rem; padding-top: 1.8rem; border-top: 1px solid var(--gold); color: var(--text-light); font-size: 0.9rem; }
+        @media print {
+            .toc, footer { display: none; }
+            body { font-size: 11pt; background: white; }
+            .container { border: 2px solid #c9a227; box-shadow: none; }
+            .page-break { page-break-before: always; }
+            .cover { min-height: auto; padding: 6rem 2rem; }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">1gilio L. J.</div>
-            <ul class="nav-links">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#livros">Livros</a></li>
-                <li><a href="sete-veus.html">Os Sete Véus</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <div class="menu-toggle" id="menu-toggle">☰</div>
-        </nav>
-    </header>
+    <img src="capa-filipe.jpg" alt="Capa ilustrada do Evangelho de Filipe" style="width: 100%; height: auto; border: 4px solid #c9a227;">
+    <!-- FRONTISPÍCIO -->
+    <div class="container frontispiece page-break">
+        <div class="ornament">✦</div>
+        <p style="font-size: 1.3rem; margin: 2rem 0;">“Se alguém se torna filho da câmara nupcial, receberá a luz.”</p>
+        <div class="ornament">✦</div>
+        <p style="margin-top: 2rem; font-size: 0.95rem;">Nag Hammadi Codex II, 3</p>
+    </div>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>1gilio L. J.</h1>
-            <p class="tagline">Escritor e pesquisador</p>
-            <a href="#livros" class="btn-primary">Conheça os Livros</a>
+    <!-- PÁGINA INICIAL -->
+    <div class="container">
+        <h1>Evangelho de Filipe</h1>
+        <p class="subtitle">Os Sete Véus<br>Coletânea de Evangelhos e Apocalipses Apócrifos</p>
+        <div class="ornament">✦ ✦ ✦</div>
+
+        <div class="note">
+            <strong>Nota editorial</strong><br>
+            Texto baseado na tradução de Wesley W. Isenberg, complementado em pontos específicos pela tradução de Mark M. Mattison. Manuscrito único: Nag Hammadi Codex II, Tratado 3 (páginas 51–86). Edição preparada para a coleção Os Sete Véus.
         </div>
-    </section>
+    </div>
 
-    <section id="livros" class="section">
-        <div class="container">
-            <h2>Meus Livros</h2>
-            <div class="books-grid">
-                <div class="book-card">
-                    <div class="book-cover">
-                        <img src="capa-enoque-vigilantes.jpg" alt="O Livro de Enoque e os Vigilantes" style="width:100%; height:auto; border-radius:4px;">
-                    </div>
-                    <h3>O Livro de Enoque e os Vigilantes</h3>
-                    <p class="book-genre">Apócrifos da História</p>
-                    <p class="book-synopsis">Edição especial de luxo com a tradução integral dos capítulos 1 a 90. Narra a queda dos duzentos Vigilantes no Monte Hermom, as revelações apocalípticas de Enoque e os mistérios do cosmos.</p>
-                    <a href="#" class="btn-secondary" target="_blank">Em breve</a>
-                </div>
+    <!-- ÍNDICE -->
+    <div class="container toc page-break">
+        <h2>Índice</h2>
+        <ul>
+            <li><a href="#intro">Introdução</a></li>
+            <li><a href="#cap1">1. Gentios, Hebreus e Cristãos</a></li>
+            <li><a href="#cap2">2. Vida, Morte e a Vinda de Cristo</a></li>
+            <li><a href="#cap3">3. Os Nomes e os Governantes</a></li>
+            <li><a href="#cap4">4. Maria e o Nome de Jesus</a></li>
+            <li><a href="#cap5">5. A Ressurreição e a Carne</a></li>
+            <li><a href="#cap6">6. A Visão de Jesus e as Três Marias</a></li>
+            <li><a href="#cap7">7. O Tintureiro e a Sabedoria</a></li>
+            <li><a href="#cap8">8. O Batismo, o Crisma e a Câmara Nupcial</a></li>
+            <li><a href="#cap9">9. O Véu do Templo e a Luz Perfeita</a></li>
+            <li><a href="#cap10">10. A Revelação e o Fim</a></li>
+        </ul>
+    </div>
 
-                <div class="book-card">
-                    <div class="book-cover">
-                        <img src="capa-1-enoque.jpg" alt="O Livro de Enoque" style="width:100%; height:auto; border-radius:4px;">
-                    </div>
-                    <h3>O Livro de Enoque</h3>
-                    <p class="book-genre">1 Enoque — Versão Etíope Completa</p>
-                    <p class="book-synopsis">Texto integral dos capítulos 1 ao 108. Inclui o Livro dos Vigilantes, as Parábolas, o Livro Astronômico, as Visões Oníricas e a Epístola de Enoque. Edição formatada em duas colunas.</p>
-                    <a href="#" class="btn-secondary" target="_blank">Em breve</a>
-                </div>
+    <div class="container book-content">
+        <h2 id="intro" class="page-break">Introdução</h2>
+        <p>O Evangelho de Filipe é um dos textos mais significativos da Biblioteca de Nag Hammadi, descoberta em dezembro de 1945 por camponeses egípcios perto da cidade de Nag Hammadi, no Alto Egito. O manuscrito faz parte do Códice II, Tratado 3, ocupando as páginas 51 a 86 do códice. Trata-se do único exemplar conhecido deste escrito.<sup>1</sup></p>
+        <p>O códice foi escrito em copta (dialeto saídico) no século IV, provavelmente por volta de 350 d.C. O texto original, porém, foi composto em grego, e a maioria dos estudiosos o situa entre meados do século II e o início do século III. Não se conhece nenhum fragmento grego, o que torna o manuscrito de Nag Hammadi a única testemunha do escrito.</p>
+        <p>Diferente dos evangelhos canônicos e mesmo do Evangelho de Tomé (que também está no mesmo códice), o Evangelho de Filipe não é uma narrativa da vida de Jesus nem uma simples coleção de ditos. É uma compilação de reflexões teológicas, sacramentais e simbólicas de caráter valentiniano. Seu foco principal está nos mistérios cristãos — especialmente o batismo, o crisma, a eucaristia e a câmara nupcial — e na ideia de restauração da unidade original entre os opostos.<sup>2</sup></p>
+        <p>O nome “Filipe” aparece apenas uma vez no texto, e a atribuição ao apóstolo é tradicional, não histórica. O escrito revela a espiritualidade de grupos gnósticos cristãos que valorizavam o conhecimento (gnose) e a experiência sacramental como caminho de retorno à plenitude.</p>
+        <p><strong>Relação com outros textos de Nag Hammadi</strong></p>
+        <p>O Evangelho de Filipe está no mesmo Códice II que o Evangelho de Tomé, logo após ele. Enquanto o Evangelho de Tomé é uma coleção de ditos de Jesus, o Evangelho de Filipe é mais meditativo e sacramental. Alguns ditos do Evangelho de Tomé encontram ecos em Filipe, especialmente no que diz respeito ao autoconhecimento e à união interior.</p>
+        <p>Também no Códice II encontram-se o Apócrifo de João, a Hipóstase dos Arcontes e o Tratado sobre a Origem do Mundo. Estes textos fornecem o pano de fundo mitológico sobre a criação, a queda e os arcontes, enquanto Filipe se concentra mais na resposta sacramental e na restauração através dos mistérios.<sup>3</sup></p>
+        <p>O tema da câmara nupcial, central em Filipe, aparece de forma relacionada na Exegese sobre a Alma (também no Códice II). Já o Evangelho da Verdade (Códice I) compartilha com Filipe a ênfase no conhecimento como libertação.</p>
 
-                <div class="book-card">
-                    <div class="book-cover">
-                        <img src="capa-2-enoque.jpg" alt="O Segundo Livro de Enoque" style="width:100%; height:auto; border-radius:4px;">
-                    </div>
-                    <h3>O Segundo Livro de Enoque</h3>
-                    <p class="book-genre">O Livro dos Segredos de Enoque</p>
-                    <p class="book-synopsis">Texto apócrifo pseudepígrafo (2 Enoque / Enoque Eslavo). Relata a jornada de ascensão de Enoque através de dez céus e os segredos do cosmos. Edição especial formatada e comentada com o texto integral de 68 capítulos.</p>
-                    <a href="#" class="btn-secondary" target="_blank">Em breve</a>
-                </div>
-
-                <div class="book-card">
-                    <div class="book-cover">
-                        <img src="capa-3-enoque.jpg" alt="O Livro de Enoque - 3 Enoque" style="width:100%; height:auto; border-radius:4px;">
-                    </div>
-                    <h3>O Livro de Enoque</h3>
-                    <p class="book-genre">3 Enoque — Sefer Hekhalot</p>
-                    <p class="book-synopsis">Texto místico hebraico da literatura dos Palácios (Hekhalot) e da Merkabah. Relata a ascensão do Rabino Ismael, a transfiguração de Enoque em Metatron e os mistérios celestiais. Texto integral (capítulos 1 a 48 + apêndices).</p>
-                    <a href="#" class="btn-secondary" target="_blank">Em breve</a>
-                </div>
-
-                <div class="book-card">
-                    <div class="book-cover">
-                        <img src="capa-evangelho-tome.jpg" alt="Evangelho de Tomé" style="width:100%; height:auto; border-radius:4px;">
-                    </div>
-                    <h3>Evangelho de Tomé</h3>
-                    <p class="book-genre">Apócrifo Espiritual</p>
-                    <p class="book-synopsis">Coleção antiga de 114 ditos atribuídos a Jesus, descoberta em Nag Hammadi. Texto integral com introdução, notas e método de estudo. Reúne sentenças, parábolas e diálogos que convidam à reflexão espiritual.</p>
-                    <a href="#" class="btn-secondary" target="_blank">Em breve</a>
-                </div>
-
-                <div class="book-card">
-                    <div class="book-cover">
-                        <img src="capa-evangelho-maria.jpg" alt="Evangelho de Maria" style="width:100%; height:auto; border-radius:4px;">
-                    </div>
-                    <h3>Evangelho de Maria</h3>
-                    <p class="book-genre">Apócrifo Espiritual</p>
-                    <p class="book-synopsis">Escrito cristão antigo fragmentário que preserva diálogos com o Salvador e um relato de visão transmitido por Maria. Texto integral com introdução, notas e método de estudo.</p>
-                    <a href="#" class="btn-secondary" target="_blank">Em breve</a>
-                </div>
-
-                <div class="book-card">
-                    <div class="book-cover">
-                        <img src="capa-evangelho-verdade.jpg" alt="Evangelho da Verdade" style="width:100%; height:auto; border-radius:4px;">
-                    </div>
-                    <h3>Evangelho da Verdade</h3>
-                    <p class="book-genre">Nag Hammadi</p>
-                    <p class="book-synopsis">Reflexão espiritual sobre a ignorância humana, a revelação de Jesus e o retorno à origem divina. Edição expandida com exploração completa dos manuscritos de Nag Hammadi.</p>
-                    <a href="#" class="btn-secondary" target="_blank">Em breve</a>
-                </div>
-            </div>
+        <div class="footnotes">
+            <p><sup>1</sup> O Códice II de Nag Hammadi é um dos melhor preservados da coleção e contém sete tratados.</p>
+            <p><sup>2</sup> A câmara nupcial é o mistério mais elevado no sistema valentiniano, representando a união da alma com sua contraparte celestial.</p>
+            <p><sup>3</sup> O Apócrifo de João apresenta a cosmologia setiana mais completa; Filipe dialoga com essa tradição de forma sacramental.</p>
         </div>
-    </section>
 
-    <section id="sobre" class="section section-alt">
-        <div class="container">
-            <h2>Sobre o Autor</h2>
-            <div class="about-content">
-                <p><strong>Os anos me ensinaram, que os melhores ensinamentos, estão nos livros, nas leituras e estudos! Assim chegamos, ao nosso, DEUS, interno!</strong></p>
-                <p>1gilio L. J. compartilha conhecimentos através da escrita e do estudo constante.</p>
-            </div>
+        <h2 id="cap1" class="page-break">1. Gentios, Hebreus e Cristãos</h2>
+        <p>Um hebreu faz outro hebreu, e essa pessoa é chamada “prosélito”. Mas um prosélito não faz outro prosélito. O escravo busca apenas ser livre, mas não espera adquirir a herança de seu senhor. Mas o filho não é apenas um filho, mas reivindica a herança do pai.<sup>4</sup></p>
+        <p>Aqueles que herdam os mortos estão eles mesmos mortos. Aqueles que herdam os vivos estão vivos. Quando éramos hebreus, éramos órfãos e tínhamos apenas nossa mãe, mas quando nos tornamos cristãos, tínhamos tanto pai quanto mãe.</p>
+        <div class="footnotes">
+            <p><sup>4</sup> A metáfora do filho e do escravo ecoa Gálatas 4 e a distinção entre herança e servidão.</p>
         </div>
-    </section>
 
-    <section id="contato" class="section">
-        <div class="container">
-            <h2>Fique por Dentro</h2>
-            <p style="text-align:center;">Acompanhe as novidades e os trabalhos.</p>
+        <h2 id="cap2" class="page-break">2. Vida, Morte e a Vinda de Cristo</h2>
+        <p>Aqueles que semeiam no inverno colhem no verão. O inverno é o mundo, o verão o outro Éon. Cristo veio para resgatar alguns, para salvar outros, para redimir outros. Redimiu tanto as pessoas boas quanto as más no mundo.</p>
+        <p>Luz e trevas, vida e morte, direita e esquerda, são irmãos uns dos outros. São inseparáveis. Aqueles que estão elevados acima do mundo são indissolúveis, eternos.</p>
+
+        <h2 id="cap3" class="page-break">3. Os Nomes e os Governantes</h2>
+        <p>Os nomes dados aos mundanos são muito enganosos. Um único nome não é pronunciado no mundo: o nome que o Pai deu ao Filho. É o nome do Pai.<sup>5</sup></p>
+        <p>Os governantes quiseram enganar o homem, pois viram que ele tinha parentesco com aqueles que são verdadeiramente bons. Antes de Cristo vir, não havia pão no mundo. Quando Cristo veio, o homem perfeito, trouxe pão do céu.</p>
+        <div class="footnotes">
+            <p><sup>5</sup> O tema dos nomes verdadeiros versus nomes enganosos é central na tradição gnóstica e aparece também no Evangelho de Tomé.</p>
         </div>
-    </section>
+
+        <h2 id="cap4" class="page-break">4. Maria e o Nome de Jesus</h2>
+        <p>Alguns disseram: “Maria concebeu pelo Espírito Santo”. Estão em erro. Maria é a virgem a quem nenhum poder contaminou.</p>
+        <p>“Jesus” é um nome oculto, “Cristo” é um nome revelado. “O Nazareno” é aquele que revela o que está oculto. Cristo tem tudo em si mesmo, seja homem, ou anjo, ou mistério, e o Pai.</p>
+
+        <h2 id="cap5" class="page-break">5. A Ressurreição e a Carne</h2>
+        <p>Aqueles que dizem que o Senhor morreu primeiro e depois ressuscitou estão em erro, pois ele ressuscitou primeiro e depois morreu. “Carne e sangue não herdarão o reino de Deus”. Qual é a sua carne? É a Palavra, e o seu sangue é o Espírito Santo.<sup>6</sup></p>
+        <p>É necessário ressuscitar nesta carne, pois tudo existe nela. No Reino dos Céus, as roupas são melhores do que aqueles que as vestem.</p>
+        <div class="footnotes">
+            <p><sup>6</sup> A interpretação espiritual de João 6:53 é típica dos textos valentinianos.</p>
+        </div>
+
+        <h2 id="cap6" class="page-break">6. A Visão de Jesus e as Três Marias</h2>
+        <p>Jesus não apareceu como era, mas da maneira pela qual seriam capazes de vê-lo. Apareceu aos grandes como grande, aos pequenos como pequeno, aos anjos como anjo e aos homens como homem. Quando apareceu aos seus discípulos em glória no monte, fez os discípulos grandes para que pudessem vê-lo.</p>
+        <p>Havia três que sempre caminhavam com o Senhor: Maria, sua mãe, e sua irmã, e Madalena, aquela que era chamada sua companheira.<sup>7</sup></p>
+        <div class="footnotes">
+            <p><sup>7</sup> A menção às três Marias e à Madalena como companheira é um dos trechos mais comentados do texto.</p>
+        </div>
+
+        <h2 id="cap7" class="page-break">7. O Tintureiro e a Sabedoria</h2>
+        <p>Deus é um tintureiro. Como seus corantes são imortais, aqueles a quem Deus tingiu tornam-se imortais. Echamoth é Sabedoria simplesmente, mas Echmoth é a Sabedoria da morte.<sup>8</sup></p>
+        <div class="footnotes">
+            <p><sup>8</sup> Echamoth / Echmoth reflete a distinção valentiniana entre a Sophia superior e a Sophia inferior (Achamoth).</p>
+        </div>
+
+        <h2 id="cap8" class="page-break">8. O Batismo, o Crisma e a Câmara Nupcial</h2>
+        <p>O Senhor fez tudo em mistério: um batismo, um crisma, uma Eucaristia, uma redenção, uma câmara nupcial. Aqueles que foram batizados na morte não são mais cristãos, mas um Cristo.<sup>9</sup></p>
+        <p>A câmara nupcial não é para os animais nem para os escravos nem para as mulheres contaminadas, mas é para os homens livres e as virgens.</p>
+        <p>Se a fêmea não tivesse sido separada do macho, não teria morrido com o macho. Sua separação foi o começo da morte. Por isso Cristo veio para reparar a separação, unindo os dois novamente.</p>
+        <div class="footnotes">
+            <p><sup>9</sup> Os cinco mistérios (batismo, crisma, eucaristia, redenção e câmara nupcial) estruturam a iniciação valentiniana.</p>
+        </div>
+
+        <h2 id="cap9" class="page-break">9. O Véu do Templo e a Luz Perfeita</h2>
+        <p>O véu do templo foi rasgado de cima a baixo, porque era necessário que alguns de baixo subissem para cima. Os poderes não podem ver aqueles que vestiram a luz perfeita.<sup>10</sup></p>
+        <p>Se alguém se torna filho da câmara nupcial, receberá a luz. Quem receber aquela luz não será visto nem preso.</p>
+        <div class="footnotes">
+            <p><sup>10</sup> A interpretação do véu rasgado (Mateus 27:51) como acesso à câmara nupcial é característica deste evangelho.</p>
+        </div>
+
+        <h2 id="cap10" class="page-break">10. A Revelação e o Fim</h2>
+        <p>Enquanto está oculto, o mal está inativo. Mas sempre que é revelado, então a luz perfeita fluirá sobre todos, e todos os que estão nela receberão o crisma. Então os escravos serão libertos e os cativos serão redimidos.</p>
+        <p>Quem entrar na câmara acenderá a sua lâmpada. Os mistérios deste casamento se cumprem no dia e na luz. Nem aquele dia nem a sua luz jamais se põem.</p>
+    </div>
+
+    <!-- CONTRACAPA -->
+    <div class="container cover page-break" style="text-align: center;">
+        <div class="ornament">✦ ✦ ✦</div>
+        <p style="font-size: 1.4rem; margin: 2rem 0; font-family: 'Playfair Display', serif;">Os Sete Véus</p>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem;">Coletânea de Evangelhos e Apocalipses Apócrifos</p>
+        <p style="margin: 2rem 0; line-height: 1.6;">Evangelho de Judas<br>Evangelho de Filipe<br>Evangelho de Pedro<br>Apócrifo de João<br>Pistis Sophia<br>Evangelho dos Egípcios<br>Apocalipse de Pedro</p>
+        <div class="ornament">✦ ✦ ✦</div>
+        <p style="margin-top: 2rem;">1gilio L. J.</p>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 1gilio L. J. Todos os direitos reservados.</p>
-        </div>
+        Evangelho de Filipe — Coleção Os Sete Véus<br>
+        1gilio L. J.
     </footer>
-
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
 </body>
 </html>
